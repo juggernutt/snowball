@@ -1,0 +1,12 @@
+.header {
+	background: $headerColor;
+	height: 65px;
+}
+
+.homepage-intro {
+	background: url('/img/bg/football.jpg') center center no-repeat transparent;
+	background-size: cover;
+	@include box-sizing(border-box);
+	height: 630px;
+	color: $introTextColor;
+}
