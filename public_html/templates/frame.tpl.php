@@ -19,7 +19,7 @@
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     <body>
-		<nav class="header row navbar navbar-static">
+		<nav class="header navbar navbar-static">
 			<div class="logo-container">
 				<a class="logo" href="/">
 					<span class="ss-icon logo-icons hidden-xs">
