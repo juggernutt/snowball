@@ -10,8 +10,6 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="css/normalize.min.css" rel="stylesheet">
-
 		<link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 		<link href="/css/print.css" media="print" rel="stylesheet" type="text/css" />
 		<!--[if IE]>
@@ -21,12 +19,28 @@
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     <body>
-
-		<nav class="header row navbar navbar-fixed-top">
-			<div class="col-xs-12 col-sm-5">
-				<a href="/">MATCHFIXING</a>
+		<nav class="header row navbar navbar-static">
+			<div class="logo-container">
+				<a class="logo" href="/">
+					<span class="ss-icon logo-icons hidden-xs">
+						<span class="sports soccer">&#x26BD;</span>
+						<span class="sports tennis">&#x1F3BE;</span>
+						<span class="sports football">&#x1F3C8;</span>
+						<span class="sports gaming">&#xEA00;</span>
+					</span>
+					<span class="brand-name">
+						<span class="brand-match">MATCH</span><span class="brand-fixing">FIXING.COM</span>
+					</span>
+					<span class="payoff">The right way of fixing matches!</span>
+					<span class="ss-icon logo-icons visible-xs">
+						<span class="sports soccer">&#x26BD;</span>
+						<span class="sports tennis">&#x1F3BE;</span>
+						<span class="sports football">&#x1F3C8;</span>
+						<span class="sports gaming">&#xEA00;</span>
+					</span>
+				</a>
 			</div>
-			<div class="col-xs-12 col-sm-3 col-sm-offset-3 text-right">
+			<div class="account-actions">
 				<a href="#" class="btn btn-primary">Registreer</a>
 				<a href="#" class="btn btn-primary">Login</a>
 			</div>
@@ -45,10 +59,11 @@
 		</div>
 		
 		<div class="container">
-		</div>
-		
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+			
+			<h1>Create your own Tournament</h1>
+	        <p>Just fill in these 3 simple steps and your ready to go!</p>
 
+		</div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 

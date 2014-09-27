@@ -1,6 +1,15 @@
+/*
+ * MATCHFIXING BASE CSS
+ * Includes all general styling.
+ *
+ * Application notes:
+ * Base font-size is 14 pixels 
+ */
+
 .header {
 	background: $headerColor;
-	height: 65px;
+	@include box-sizing(border-box);
+	padding: 15px 10px;
 }
 
 .homepage-intro {
@@ -11,3 +20,134 @@
 	color: $introTextColor;
 }
 
+/*
+ * Logo
+ */
+
+.logo {
+	font-size: 1.714em; /* 24 pixels */
+	color: $logoTextColor;
+	display: block;
+	
+	.logo-icons {
+		display: inline-block;
+		vertical-align: middle;
+		&:after {
+			height: 17px;
+			width: 2px;
+			background-color: $logoBorderColor;
+			content: '';
+			vertical-align: middle;
+			margin-bottom: 8px;
+		}
+		
+		.sports {
+			vertical-align: bottom;
+			margin-left: 3px;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+	
+	.brand-name {
+		display: inline-block;
+		clear: both;
+	}
+	
+	.brand-match {
+		margin-right: 5px;
+		font-weight: bold;
+	}
+	
+	.payoff {
+		font-size: 0.500em; /* 12 pixels */
+		font-style: italic;
+		display: block;
+		clear: both;
+	}
+	
+	&:hover, &:focus {
+		text-decoration: none;
+		color: $logoTextColor;
+	}
+}
+
+/*
+ * Sports
+ */
+
+.soccer {
+	color: $soccerColor;
+}
+.tennis {
+	color: $tennisColor;
+}
+.football {
+	color: $footballColor;
+}
+.gaming {
+	color: $gamingColor;
+}
+
+
+
+
+/*
+ * Frame styling
+ */
+ 
+.header {
+	.logo-container {
+		@include make-xs-column(12);
+		@include make-sm-column(5);
+	}
+	.account-actions {
+		@include make-xs-column(12);
+		@include make-sm-column(3);
+		@include make-sm-column-offset(4);
+	}
+}
+
+@media (max-width: $screen-xs-max) {
+	.logo-container {
+		margin-bottom: 10px;
+	}
+	
+	.logo {
+		.payoff {
+			margin-bottom: 5px;
+		}
+	}
+	
+	.logo-container,
+	.account-actions {
+		text-align: center;
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+	.logo {
+		width: 384px;
+
+		.pay-off {
+			text-align: right;
+		}
+		
+		.logo-icons {
+			&:after {				
+				display: inline-block;
+				margin-right: 5px;
+				margin-left: 8px;
+			}
+		}
+	}
+
+	.logo-container {
+		text-align: right;		
+	}
+	
+	.account-actions {
+		text-align: right;
+	}
+}

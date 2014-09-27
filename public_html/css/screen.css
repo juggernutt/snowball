@@ -8,7 +8,13 @@
 /* Scaffolding */
 /* Buttons */
 /*
- * Application colors
+ * Application variables
+ */
+/* 
+ * Colors 
+ */
+/* 
+ * Sports
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /* line 9, ../../sass/vendor/bootstrap/_normalize.scss */
@@ -8069,7 +8075,7 @@ html:hover [class^="ss-"] {
   text-decoration: none;
   text-rendering: optimizeLegibility;
   white-space: nowrap;
-  /*-webkit-font-feature-settings: "liga"; Currently broken in Chrome >= v22. Falls back to text-rendering. Safari is unaffected. */
+  -webkit-font-feature-settings: "liga";
   -moz-font-feature-settings: "liga=1";
   -moz-font-feature-settings: "liga";
   -ms-font-feature-settings: "liga" 1;
@@ -10608,13 +10614,23 @@ html:hover [class^="ss-"] {
 /*
  * Include all stylesheets
  */
-/* line 1, ../../sass/_main.scss */
+/*
+ * MATCHFIXING BASE CSS
+ * Includes all general styling.
+ *
+ * Application notes:
+ * Base font-size is 14 pixels 
+ */
+/* line 9, ../../sass/_main.scss */
 .header {
   background: #FFF;
-  height: 65px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 15px 10px;
 }
 
-/* line 6, ../../sass/_main.scss */
+/* line 15, ../../sass/_main.scss */
 .homepage-intro {
   background: url("/img/bg/football.jpg") center center no-repeat transparent;
   background-size: cover;
@@ -10623,4 +10639,178 @@ html:hover [class^="ss-"] {
   box-sizing: border-box;
   height: 630px;
   color: #FFF;
+}
+
+/*
+ * Logo
+ */
+/* line 27, ../../sass/_main.scss */
+.logo {
+  font-size: 1.714em;
+  /* 24 pixels */
+  color: #222;
+  display: block;
+}
+/* line 32, ../../sass/_main.scss */
+.logo .logo-icons {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 35, ../../sass/_main.scss */
+.logo .logo-icons:after {
+  height: 17px;
+  width: 2px;
+  background-color: #222;
+  content: '';
+  vertical-align: middle;
+  margin-bottom: 8px;
+}
+/* line 44, ../../sass/_main.scss */
+.logo .logo-icons .sports {
+  vertical-align: bottom;
+  margin-left: 3px;
+}
+/* line 47, ../../sass/_main.scss */
+.logo .logo-icons .sports:first-child {
+  margin-left: 0;
+}
+/* line 53, ../../sass/_main.scss */
+.logo .brand-name {
+  display: inline-block;
+  clear: both;
+}
+/* line 58, ../../sass/_main.scss */
+.logo .brand-match {
+  margin-right: 5px;
+  font-weight: bold;
+}
+/* line 63, ../../sass/_main.scss */
+.logo .payoff {
+  font-size: 0.500em;
+  /* 12 pixels */
+  font-style: italic;
+  display: block;
+  clear: both;
+}
+/* line 70, ../../sass/_main.scss */
+.logo:hover, .logo:focus {
+  text-decoration: none;
+  color: #222;
+}
+
+/*
+ * Sports
+ */
+/* line 80, ../../sass/_main.scss */
+.soccer {
+  color: #6fd64b;
+}
+
+/* line 83, ../../sass/_main.scss */
+.tennis {
+  color: #ffd154;
+}
+
+/* line 86, ../../sass/_main.scss */
+.football {
+  color: #eea54e;
+}
+
+/* line 89, ../../sass/_main.scss */
+.gaming {
+  color: #00ccff;
+}
+
+/*
+ * Frame styling
+ */
+/* line 101, ../../sass/_main.scss */
+.header .logo-container {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  /* line 101, ../../sass/_main.scss */
+  .header .logo-container {
+    float: left;
+    width: 41.66667%;
+  }
+}
+/* line 105, ../../sass/_main.scss */
+.header .account-actions {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  /* line 105, ../../sass/_main.scss */
+  .header .account-actions {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 768px) {
+  /* line 105, ../../sass/_main.scss */
+  .header .account-actions {
+    margin-left: 33.33333%;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 113, ../../sass/_main.scss */
+  .logo-container {
+    margin-bottom: 10px;
+  }
+
+  /* line 118, ../../sass/_main.scss */
+  .logo .payoff {
+    margin-bottom: 5px;
+  }
+
+  /* line 123, ../../sass/_main.scss */
+  .logo-container,
+  .account-actions {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  /* line 130, ../../sass/_main.scss */
+  .logo {
+    width: 384px;
+  }
+  /* line 133, ../../sass/_main.scss */
+  .logo .pay-off {
+    text-align: right;
+  }
+  /* line 138, ../../sass/_main.scss */
+  .logo .logo-icons:after {
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 8px;
+  }
+
+  /* line 146, ../../sass/_main.scss */
+  .logo-container {
+    text-align: right;
+  }
+
+  /* line 150, ../../sass/_main.scss */
+  .account-actions {
+    text-align: right;
+  }
 }

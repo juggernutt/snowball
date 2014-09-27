@@ -15,8 +15,21 @@ $btn-primary-color	: #FFF;
 
 
 /*
- * Application colors
+ * Application variables
  */
- 
+$icon-font02		: 'ss-icon';
+
+/* 
+ * Colors 
+ */
 $headerColor	: #FFF;
 $introTextColor	: #FFF;
+$logoTextColor	: #222;
+$logoBorderColor: $logoTextColor;
+/* 
+ * Sports
+ */
+$soccerColor	: #6fd64b;
+$tennisColor	: #ffd154;
+$footballColor	: #eea54e;
+$gamingColor	: #00ccff;
